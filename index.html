@@ -1,7 +1,1674 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Ağ Temelleri ve İleri Seviye Konular</title>
+    <link rel="stylesheet" href="/dist/reset.css">
+
+    <link rel="stylesheet" href="/dist/reveal.css">
+    <!-- <link rel="stylesheet" href="dist/theme/white.css"> -->
+    <link rel="stylesheet" href="/dist/theme/black.css">
+    <style>
+        .reveal section {
+            height: 100%;
+            background: #1E1E1E;
+            color: #E0E0E0;
+        }
+    
+        .toc {
+            background: #2D2D2D;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    
+        .chapter-title {
+            color: #64B5F6;
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+    
+        .chat-bubble {
+            background: #1E3242;
+            border-radius: 20px;
+            padding: 15px 25px;
+            margin: 10px;
+            display: inline-block;
+            max-width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border: 1px solid #2C4356;
+        }
+    
+        .tech-box {
+            background: #2D2D2D;
+            border-left: 4px solid #64B5F6;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Additional dark theme enhancements */
+        a {
+            color: #64B5F6;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #90CAF9;
+            text-decoration: underline;
+        }
+    
+        code {
+            background: #363636;
+            color: #E0E0E0;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
 <body>
-  <h1>Please visit: <a href="https://q-e.io">q-e.io</a></h1>
-  <p>Proudly Based in Istanbul</p>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Ana Başlık -->
+            <section>
+                <h1>Ağ Temelleri ve İleri Seviye Konular</h1>
+                <p>Kapsamlı Ağ Eğitimi</p>
+            </section>
+
+            
+            <!-- Bölüm 1: Temel Ağ Kavramları -->
+             <!-- Giriş Bölümü -->
+             <section data-auto-animate>
+                <h1 class="fragment fade-up">Ağ Dünyasına Hoş Geldiniz! 🌐</h1>
+                <div class="chat-bubble fragment fade-up">
+                    Haydi birlikte ağları keşfedelim...
+                </div>
+            </section>
+
+            <!-- Yolculuk Haritası -->
+            <section data-auto-animate>
+                <h2>Bugün Neler Öğreneceğiz? 🗺️</h2>
+                <div class="concept-box">
+                    <ul>
+                        <li class="fragment fade-right">IP Adresleri ve Türleri</li>
+                        <li class="fragment fade-right">Alt Ağlar ve Maskeler</li>
+                        <li class="fragment fade-right">Ağ Güvenliği</li>
+                        <li class="fragment fade-right">VLAN'lar ve Yayın Alanları</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- İçindekiler -->
+            <!-- <section>
+                <h2>İçindekiler</h2>
+                <div class="toc">
+                    <h3>1. Temel Ağ Kavramları (Slides 1-20)</h3>
+                    <ul>
+                        <li>IP Adresleri ve Türleri</li>
+                        <li>Alt Ağlar ve Maskeleme</li>
+                        <li>IPv4 ve IPv6</li>
+                        <li>DHCP ve DNS Temelleri</li>
+                        <li>Routing ve Switching Temelleri</li>
+                    </ul>
+
+                    <h3>2. Güvenlik ve Erişim Kontrolü (Slides 21-40)</h3>
+                    <ul>
+                        <li>Güvenlik Duvarı Yapılandırması</li>
+                        <li>VPN Teknolojileri</li>
+                        <li>Saldırı Türleri ve Korunma</li>
+                        <li>Access Control Lists</li>
+                        <li>Security Zones ve DMZ</li>
+                    </ul>
+
+                    <h3>3. Ağ Tasarımı ve Optimizasyon (Slides 41-60)</h3>
+                    <ul>
+                        <li>VLAN Yapılandırması</li>
+                        <li>Trafik Yönetimi</li>
+                        <li>QoS İlkeleri</li>
+                        <li>Yük Dengeleme</li>
+                        <li>Yüksek Erişilebilirlik</li>
+                    </ul>
+
+                    <h3>4. İleri Seviye Konular (Slides 61-80)</h3>
+                    <ul>
+                        <li>Network Automation</li>
+                        <li>Cloud Networking</li>
+                        <li>SDN ve NFV</li>
+                        <li>5G/6G Teknolojileri</li>
+                        <li>Gelecek Trendleri</li>
+                    </ul>
+                </div>
+            </section> -->
+
+             <!-- Karşılama Slaytı -->
+             <section data-auto-animate>
+                <h1 class="fragment fade-up">Hey! 👋</h1>
+                <h2 class="fragment fade-up">Bugün birlikte ağları keşfedeceğiz!</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Hazır mısınız? Çok eğlenceli olacak! 🚀
+                </div>
+            </section>
+
+            <!-- IP Adresleri Giriş -->
+            <section>
+                <section data-auto-animate>
+                    <h2>IP Adresleri... 🤔</h2>
+                    <div class="question-bubble fragment fade-left">
+                        "IP adresi nedir ya?"
+                    </div>
+                    <div class="chat-bubble fragment fade-right">
+                        Düşünün ki her evin bir adresi var...
+                    </div>
+                    <div class="concept-box fragment fade-up">
+                        İnternetteki her cihazın da kendi "adresi" var!
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>IP Adresi Nedir?</h2>
+                    <div class="concept-box fragment fade-up">
+                        <p>Tıpkı ev adresiniz gibi...</p>
+                        <p class="fragment fade-right">Her cihazın internetteki adresi!</p>
+                    </div>
+                    <div class="example-code fragment fade-up">
+                        192.168.1.100
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>Temel Terminoloji</h2>
+                    <div class="term-grid">
+                        <div class="term-card fragment fade-up">
+                            <h3>IP (Internet Protocol)</h3>
+                            <p>İnternet üzerindeki iletişimi sağlayan temel protokol</p>
+                        </div>
+                        <div class="term-card fragment fade-up">
+                            <h3>IPv4 vs IPv6</h3>
+                            <p>Eski (32-bit) ve yeni (128-bit) adres sistemleri</p>
+                        </div>
+                        <div class="term-card fragment fade-up">
+                            <h3>Static vs Dynamic</h3>
+                            <p>Sabit veya değişken IP adresleri</p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>IP Adresi Örnekleri</h2>
+                    <div class="example-container">
+                        <div class="ip-example fragment fade-left">
+                            <h3>IPv4</h3>
+                            <code>192.168.1.1</code>
+                            <p>Router'ınızın tipik adresi</p>
+                        </div>
+                        <div class="ip-example fragment fade-right">
+                            <h3>IPv6</h3>
+                            <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>
+                            <p>Modern cihazların kullandığı format</p>
+                        </div>
+                        <div class="ip-example fragment fade-up">
+                            <h3>Localhost</h3>
+                            <code>127.0.0.1</code>
+                            <p>Kendi bilgisayarınızı gösteren özel adres</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- IP Adres Türleri -->
+            <section>
+                <section data-auto-animate>
+                    <h2>İki Tür IP Var! 🏠</h2>
+                    <div class="fragment fade-up">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div style="text-align: center;">
+                                <h3>Özel IP</h3>
+                                <p>Ev içindeki odalar gibi</p>
+                                <div class="fun-fact">
+                                    192.168.1.1
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <h3>Genel IP</h3>
+                                <p>Evin sokak adresi gibi</p>
+                                <div class="fun-fact">
+                                    203.0.113.1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>Özel IP vs Genel IP</h2>
+                    <div class="chat-bubble fragment fade-left">
+                        Ev içi adres mi, sokak adresi mi? 🤔
+                    </div>
+                    <div style="display: flex; justify-content: space-around;" class="fragment fade-up">
+                        <div>
+                            <h3>Özel IP</h3>
+                            <p>Ev içindeki odalar</p>
+                        </div>
+                        <div>
+                            <h3>Genel IP</h3>
+                            <p>Evin sokak adresi</p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>İngilizce Terminoloji 🌍</h2>
+                    <div class="fragment fade-up">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div style="text-align: center;">
+                                <h3>Private IP</h3>
+                                <p>Local Network Address</p>
+                                <div class="fun-fact">
+                                    Internal IP
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <h3>Public IP</h3>
+                                <p>Global Network Address</p>
+                                <div class="fun-fact">
+                                    External IP
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>Örnekler 📝</h2>
+                    <div class="fragment fade-up">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div style="text-align: left;">
+                                <h3>Özel IP Aralıkları:</h3>
+                                <ul>
+                                    <li>10.0.0.0 - 10.255.255.255</li>
+                                    <li>172.16.0.0 - 172.31.255.255</li>
+                                    <li>192.168.0.0 - 192.168.255.255</li>
+                                </ul>
+                            </div>
+                            <div style="text-align: left;">
+                                <h3>Genel IP Örneği:</h3>
+                                <ul>
+                                    <li>8.8.8.8</li>
+                                    <li> - - (Google DNS)</li>
+                                    <li>1.1.1.1</li>
+                                    <li> - - (Cloudflare DNS)</li>
+                                    <li>104.16.x.x</li>
+                                    <li> - - (Cloudflare)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            <!-- Broadcast Domain Giriş -->
+            <section>
+                <section data-auto-animate>
+                    <h2>Yayın Alanları 📢</h2>
+                    <div class="question-bubble fragment fade-left">
+                        "Yayın alanı ne demek?"
+                    </div>
+                    <div class="chat-bubble fragment fade-right">
+                        Bir sınıftaki öğrenciler gibi düşünün...
+                    </div>
+                    <div class="concept-box fragment fade-up">
+                        Öğretmen bir şey söylediğinde herkes duyar!
+                    </div>
+                </section>
+                <section>
+                    <h3>İngilizce Terminoloji</h3>
+                    <div class="term-box fragment">
+                        <span class="highlight">Broadcast Domain</span>
+                        <p>Ağ cihazlarının doğrudan haberleşebildiği alan</p>
+                    </div>
+                    <div class="network-terms fragment">
+                        <ul>
+                            <li>Broadcast Address 📫</li>
+                            <li>Network Segment 🔀</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Örnek Uygulamalar</h3>
+                    <div class="example-grid">
+                        <div class="example-card fragment">
+                            <h4>Yerel Ağ (LAN)</h4>
+                            <p>Ofisteki bilgisayarlar 💻</p>
+                        </div>
+                        <div class="example-card fragment">
+                            <h4>WiFi Ağı</h4>
+                            <p>Kablosuz cihazlar 📱</p>
+                        </div>
+                        <div class="example-card fragment">
+                            <h4>Switch Bağlantıları</h4>
+                            <p>Aynı switch'e bağlı cihazlar 🔌</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- VLAN'lar -->
+            <section>
+                <section data-auto-animate>
+                    <h2>VLAN'lar 🚪</h2>
+                    <div class="chat-bubble fragment fade-left">
+                        Okuldaki sınıflar gibi...
+                    </div>
+                    <div class="concept-box fragment fade-up">
+                        <p>Her sınıf kendi içinde konuşur!</p>
+                        <ul>
+                            <li class="fragment fade-right">VLAN 10: 5-A Sınıfı</li>
+                            <li class="fragment fade-right">VLAN 20: 5-B Sınıfı</li>
+                            <li class="fragment fade-right">VLAN 30: Öğretmenler Odası</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>English Terminology</h2>
+                    <div class="concept-box fragment fade-up">
+                        <ul>
+                            <li class="fragment fade-right">VLAN (Virtual Local Area Network)</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>Real-World Examples</h2>
+                    <div class="chat-bubble fragment fade-left">
+                        Ofis ortamında...
+                    </div>
+                    <div class="concept-box fragment fade-up">
+                        <ul>
+                            <li class="fragment fade-right">VLAN 100: Muhasebe Departmanı</li>
+                            <li class="fragment fade-right">VLAN 200: İK Departmanı</li>
+                            <li class="fragment fade-right">VLAN 300: BT Departmanı</li>
+                            <li class="fragment fade-right">VLAN 400: Yönetim</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+
+            
+            <section>
+                <section data-auto-animate>
+                    <h2>Özel IP Aralıkları</h2>
+                    <div class="chat-bubble fragment fade-right">
+                        Özel IP'ler için ayrılmış özel bölgeler var!
+                    </div>
+                    <div class="example-code fragment fade-up">
+                        10.0.0.0 - 10.255.255.255
+                        172.16.0.0 - 172.31.255.255
+                        192.168.0.0 - 192.168.255.255
+                    </div>
+                </section>
+                <section>
+                    <h2>English Terminology</h2>
+                    <ul class="fragment fade-up">
+                        <li>Private IP Address</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Örnekler</h2>
+                    <div class="chat-bubble fragment fade-right">
+                        Ev ağınızda kullanılan IP: 192.168.1.1
+                    </div>
+                    <div class="chat-bubble fragment fade-left">
+                        Şirket ağında kullanılan IP: 10.0.0.1
+                    </div>
+                    <div class="example-code fragment fade-up">
+                        Router IP: 192.168.0.1
+                        Printer IP: 192.168.0.50
+                        PC IP: 192.168.0.100
+                    </div>
+                </section>
+            </section>
+
+            <!-- Alt Ağlar -->
+            <section>
+                <section data-auto-animate>
+                    <h2>Alt Ağlar 🏘️</h2>
+                    <div class="chat-bubble fragment fade-left">
+                        Bir mahalleyi düşünün...
+                    </div>
+                    <div class="scenario-box fragment fade-up">
+                        Her sokak ayrı bir alt ağ gibidir!
+                    </div>
+                </section>
+                <section>
+                    <h3>İngilizce Terimler</h3>
+                    <div class="terms-grid fragment fade-up">
+                        <div class="term">Subnet (Subnet) 🌐</div>
+                        <div class="term">Subnet Mask (Alt Ağ Maskesi) 🎭</div>
+                        <div class="term">Network ID (Ağ Kimliği) 🆔</div>
+                        <div class="term">Broadcast Address (Yayın Adresi) 📢</div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Örnekler</h3>
+                    <div class="example-box fragment fade-left">
+                        <h4>🏠 Ev Ağı Örneği</h4>
+                        <ul>
+                            <li>Ağ: 192.168.1.0/24</li>
+                            <li>Maske: 255.255.255.0</li>
+                            <li>Kullanılabilir IP'ler: 192.168.1.1 - 192.168.1.254</li>
+                        </ul>
+                    </div>
+                    <div class="fun-fact fragment fade-right">
+                        <p>💡 Biliyor muydunuz?</p>
+                        <p>Bir /24 ağda 254 cihaz bağlanabilir!</p>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section data-auto-animate>
+                    <h2>Alt Ağ Maskesi</h2>
+                    <div class="chat-bubble fragment fade-right">
+                        Hangi evler aynı sokakta? 🤔
+                    </div>
+                    <div class="example-code fragment fade-up">
+                        IP: 192.168.1.100
+                        Maske: 255.255.255.0
+                        (/24 ile gösterilir)
+                    </div>
+                </section>
+                <section>
+                    <h3>Network ve Host Bitleri</h3>
+                    <div class="binary-box fragment fade-up">
+                        <code>11111111.11111111.11111111.00000000</code>
+                        <span class="network-bits">Network → 24 bit</span>
+                        <span class="host-bits">Host → 8 bit</span>
+                    </div>
+                    <div class="fragment fade-up">
+                        <code>Alt ağ adresi: 192.168.1.0</code>
+                    </div>
+                </section>
+                <section>
+                    <h3>Pratik Örnek</h3>
+                    <div class="example-grid fragment fade-left">
+                        <div class="ip-box">192.168.1.50 ✅</div>
+                        <div class="ip-box">192.168.1.150 ✅</div>
+                        <div class="ip-box">192.168.2.50 ❌</div>
+                    </div>
+                    <div class="note-box fragment fade-up">
+                        Aynı alt ağdaki cihazlar doğrudan haberleşebilir! 🔄
+                    </div>
+                </section>
+            </section>
+
+            <!-- Bölüm 2: Güvenlik ve Erişim Kontrolü -->
+            <!-- Bölüm 2: Ağ Güvenliği -->
+
+            <section data-auto-animate>
+                <h2>Ağ Güvenliği Neden Önemli? 🔒</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Bir banka düşünelim... Neden güvenlik duvarına ihtiyacı var?
+                </div>
+            </section>
+
+
+
+            <section data-auto-animate>
+                <h2>Güvenlik Tehditleri</h2>
+                <div class="concept-box fragment fade-up">
+                    <p>Peki tehditler nereden geliyor? 🤔</p>
+                    <div class="fragment fade-right">İnternetten gelen saldırılar</div>
+                    <div class="fragment fade-right">İç ağdan gelen tehditler</div>
+                    <div class="fragment fade-right">Sosyal mühendislik</div>
+                </div>
+            </section>
+                
+
+
+            <section data-auto-animate>
+                <h2>Güvenlik Duvarı Nedir?</h2>
+                <div class="chat-bubble fragment fade-left">
+                    Evinizin kapısındaki güvenlik görevlisi gibi düşünün...
+                </div>
+                <div class="scenario-box fragment fade-up">
+                    Kimin girip çıkacağına karar verir! 👮‍♂️
+                </div>
+            </section>
+
+
+            <section data-auto-animate>
+                <h2>Temel Güvenlik Kuralları</h2>
+                <div class="concept-box fragment fade-up">
+                    <p>En Önemli Kurallarımız:</p>
+                    <div class="fragment fade-right">✅ Sadece gerekli portları aç</div>
+                    <div class="fragment fade-right">✅ Her şeyi kaydet</div>
+                    <div class="fragment fade-right">✅ Düzenli güncelle</div>
+                </div>
+            </section>
+
+
+            <section data-auto-animate>
+                <h2>VLAN'lar ile Ağ Bölümlendirme 🏢</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Bir ofis binasını düşünelim...
+                </div>
+            </section>
+
+
+            <section data-auto-animate>
+                <h2>Her Departman Ayrı VLAN</h2>
+                <div class="network-diagram fragment fade-up">
+                    <div class="fragment fade-right">Muhasebe: VLAN 10</div>
+                    <div class="fragment fade-right">İK: VLAN 20</div>
+                    <div class="fragment fade-right">BT: VLAN 30</div>
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h2>VLAN'ların Faydaları</h2>
+                <div class="chat-bubble fragment fade-left">
+                    Neden her departmanı ayırıyoruz? 🤔
+                </div>
+                <div class="concept-box fragment fade-up">
+                    <div class="fragment fade-right">✨ Daha az trafik</div>
+                    <div class="fragment fade-right">✨ Daha iyi güvenlik</div>
+                    <div class="fragment fade-right">✨ Kolay yönetim</div>
+                </div>
+            </section>
+
+            <!-- Broadcast Domain -->
+            <section data-auto-animate>
+                <h2>Yayın Alanları 📢</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Bir konferans salonunu düşünün...
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h2>Yayın Nedir?</h2>
+                <div class="scenario-box fragment fade-up">
+                    <p>Birisi bağırdığında...</p>
+                    <p class="fragment fade-right">Herkes duyar! 🔊</p>
+                </div>
+            </section>
+
+            <!-- CIDR Notasyonu -->
+            <section data-auto-animate>
+                <h2>CIDR Notasyonu 📝</h2>
+                <div class="chat-bubble fragment fade-up">
+                    IP adreslerini daha kolay yazmanın yolu!
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h2>CIDR Nasıl Çalışır?</h2>
+                <div class="example-code fragment fade-up">
+                    192.168.1.0/24
+                </div>
+                <div class="concept-box fragment fade-right">
+                    24 bit ağ adresi için ayrılmış
+                </div>
+            </section>
+
+            <!-- Bölüm 3: Ağ Tasarımı ve Optimizasyon -->
+            <!-- Güvenlik Duvarı Detayları -->
+            <section data-auto-animate>
+                <h2>Güvenlik Duvarı Kuralları</h2>
+                <div class="tech-note fragment fade-up">
+                    <p>Temel Güvenlik Duvarı Kuralı Yapısı:</p>
+                    <pre>
+Kaynak IP → Hedef IP
+Port Numarası
+İzin/Red Kararı</pre>
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h2>Güvenlik Duvarı Örneği</h2>
+                <div class="concept-box fragment fade-up">
+                    <p>Örnek Kural Seti:</p>
+                    <div class="tech-note fragment fade-right">
+                        İzin: 192.168.1.0/24 → 10.0.0.0/8 Port 80
+                        Red: * → 10.0.0.0/8 *
+                    </div>
+                </div>
+            </section>
+
+            <!-- Saldırı Türleri -->
+            <section data-auto-animate>
+                <h2>Yaygın Saldırı Türleri</h2>
+                <div class="security-alert fragment fade-up">
+                    <p>DDoS Saldırısı:</p>
+                    <div class="fragment fade-right">Çok sayıda sahte istek ile sistemi bunaltma</div>
+                </div>
+            </section>
+
+            <section data-auto-animate>
+                <h2>Saldırılardan Korunma</h2>
+                <div class="concept-box fragment fade-up">
+                    <p>Temel Korunma Yöntemleri:</p>
+                    <div class="fragment fade-right">✅ Güvenlik Duvarı Kuralları</div>
+                    <div class="fragment fade-right">✅ IDS/IPS Sistemleri</div>
+                    <div class="fragment fade-right">✅ Düzenli Güncelleme</div>
+                </div>
+            </section>
+
+            <!-- VLAN Detayları -->
+            <section data-auto-animate>
+                <h2>VLAN Trunk Bağlantıları</h2>
+                <div class="network-diagram fragment fade-up">
+                    <p>Switch'ler Arası VLAN Taşıma:</p>
+                    <div class="tech-note fragment fade-right">
+                        802.1Q Protocol
+                        VLAN Tag
+                        Native VLAN
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Trunk Ne İşe Yarar? 🔌</h3>
+                <div class="tech-grid fragment fade-left">
+                    <div class="feature">
+                        <h4>802.1Q Etiketleme:</h4>
+                        <code>Frame + VLAN ID (12 bit) = Tagged Frame</code>
+                    </div>
+                    <div class="example-note fragment fade-right">
+                        Tek kablo üzerinden çoklu VLAN taşıma 🚌
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Native VLAN 🏠</h3>
+                <div class="info-box fragment fade-up">
+                    <p>Etiketlenmeden geçen trafik</p>
+                    <p>Genelde VLAN 1 (Varsayılan)</p>
+                    <div class="warning fragment fade-right">
+                        ⚠️ Güvenlik için değiştirilmeli!
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <section data-auto-animate>
+                    <h2>Inter-VLAN Routing</h2>
+                    <div class="scenario-box fragment fade-up">
+                        <p>Şirketimizdeki Durum:</p>
+                        <ul>
+                            <li>Pazarlama: VLAN 10</li>
+                            <li>Muhasebe: VLAN 20</li>
+                            <li>IT: VLAN 30</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Problem 🤔</h3>
+                    <div class="story-box fragment fade-left">
+                        <p>Pazarlama bölümü yeni bir kampanya için muhasebeden bütçe onayı istiyor...</p>
+                        <p>Ama farklı VLAN'larda oldukları için iletişim kuramazlar! 🚫</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Çözüm 1: Router-on-a-Stick 🎯</h3>
+                    <div class="solution-box fragment fade-up">
+                        <p>Basit ve ekonomik çözüm:</p>
+                        <ul>
+                            <li>Tek router alınır</li>
+                            <li>Switch'e trunk bağlantı yapılır</li>
+                            <li>Router üzerinde alt arayüzler oluşturulur:</li>
+                            <code class="fragment fade-right">
+                                Router'da:
+                                Fa0/0.10 → VLAN 10
+                                Fa0/0.20 → VLAN 20
+                                Fa0/0.30 → VLAN 30
+                            </code>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Çözüm 2: Layer 3 Switch 🚀</h3>
+                    <div class="solution-box fragment fade-up">
+                        <p>Kurumsal çözüm:</p>
+                        <ul>
+                            <li>Mevcut switch'i Layer 3 switch ile değiştiririz</li>
+                            <li>Her VLAN için sanal arayüz (SVI) oluştururuz:</li>
+                            <code class="fragment fade-right">
+                                Switch'de:
+                                VLAN 10 → int vlan 10
+                                VLAN 20 → int vlan 20
+                                VLAN 30 → int vlan 30
+                            </code>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Sonuç 🎉</h3>
+                    <div class="result-box fragment fade-up">
+                        <p>Artık:</p>
+                        <ul>
+                            <li>Pazarlama → Muhasebe ile konuşabilir</li>
+                            <li>IT → Herkese destek verebilir</li>
+                            <li>Bölümler arası güvenlik duvarı kuralları uygulanabilir</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <!-- CIDR ve Alt Ağlar -->
+            <section>
+                <section data-auto-animate>
+                    <h2>Alt Ağ Hesaplama</h2>
+                    <div class="tech-note fragment fade-up">
+                        <p>192.168.1.0/24 ağını bölelim:</p>
+                        <pre class="fragment fade-right">
+             /25 → 128 host
+             /26 → 64 host
+             /27 → 32 host</pre>
+                    </div>
+                </section>
+             
+                <section>
+                    <h3>Örnek Senaryo</h3>
+                    <div class="scenario-box fragment fade-left">
+                        <p>Şirketimizde:</p>
+                        <ul>
+                            <li>100 Pazarlama çalışanı 👥</li>
+                            <li>50 Muhasebe çalışanı 💼</li>
+                            <li>20 IT personeli 💻</li>
+                        </ul>
+                    </div>
+                </section>
+             
+                <section>
+                    <h3>Çözüm 📝</h3>
+                    <div class="solution-grid fragment fade-up">
+                        <div class="network">
+                            <p>Pazarlama (/25):</p>
+                            <code>192.168.1.0 - 192.168.1.127</code>
+                        </div>
+                        <div class="network">
+                            <p>Muhasebe (/26):</p>
+                            <code>192.168.1.128 - 192.168.1.191</code>
+                        </div>
+                        <div class="network">
+                            <p>IT (/27):</p>
+                            <code>192.168.1.192 - 192.168.1.223</code>
+                        </div>
+                    </div>
+                </section>
+             </section>
+
+            
+
+            <!-- Bölüm 4: İleri Seviye Konular -->
+            <section>
+                <section data-auto-animate>
+                    <h2>Ağ İzleme Neden Önemli?</h2>
+                    <div class="chat-bubble fragment fade-up">
+                        Bir hastane ağını düşünelim...
+                    </div>
+                    <div class="case-study fragment fade-right">
+                        7/24 kesintisiz hizmet vermesi gerekiyor!
+                    </div>
+                </section>
+             
+                <section>
+                    <h3>Hastane Senaryosu 🏥</h3>
+                    <div class="critical-systems fragment fade-left">
+                        <ul>
+                            <li>Hasta Kayıt Sistemi</li>
+                            <li>Laboratuvar Sonuçları</li>
+                            <li>Acil Servis İletişimi</li>
+                        </ul>
+                        <div class="warning-box fragment fade-up">
+                            1 dakikalık kesinti bile hayati risk! ⚠️
+                        </div>
+                    </div>
+                </section>
+             
+                <section data-auto-animate>
+                    <h2>İzleme Araçları</h2>
+                    <div class="tech-box fragment fade-up">
+                        <p>Temel İzleme Parametreleri:</p>
+                        <div class="fragment fade-right">Bant Genişliği Kullanımı</div>
+                        <div class="fragment fade-right">CPU ve Bellek Yükü</div>
+                        <div class="fragment fade-right">Hata Oranları</div>
+                    </div>
+                </section>
+             
+                <section>
+                    <h3>Gerçek Zamanlı İzleme 📊</h3>
+                    <div class="monitoring-box fragment fade-up">
+                        <ul>
+                            <li>MR Görüntüleri → Yüksek Bant Genişliği</li>
+                            <li>Hasta Monitörleri → Düşük Gecikme</li>
+                            <li>Veri Tabanı → Yüksek CPU</li>
+                        </ul>
+                    </div>
+                    <div class="alert-box fragment fade-right">
+                        Sorun çıkmadan önlem al! 🚨
+                    </div>
+                </section>
+             </section>
+
+        <!-- Performance Monitoring -->
+        <section>
+            <section data-auto-animate>
+                <h2>Performans Ölçümü</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Ağımız ne kadar sağlıklı?
+                </div>
+                <div class="tech-box fragment fade-right">
+                    <p>Kritik Metrikler:</p>
+                    <div class="fragment fade-up">Gecikme (Latency)</div>
+                    <div class="fragment fade-up">Paket Kaybı</div>
+                    <div class="fragment fade-up">Jitter</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Online Oyun Senaryosu 🎮</h3>
+                <div class="scenario-box fragment fade-left">
+                    <p>CS:GO oyuncusu:</p>
+                    <ul>
+                        <li>Gecikme: 20ms altı olmalı</li>
+                        <li>Paket Kaybı: %1 altı</li>
+                        <li>Jitter: 5ms altı</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Video Konferans 🎥</h3>
+                <div class="metrics-box fragment fade-up">
+                    <p>Zoom/Teams Gereksinimleri:</p>
+                    <ul>
+                        <li>Gecikme < 150ms</li>
+                        <li>Paket Kaybı < %3</li>
+                        <li>Jitter < 30ms</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Sorun Giderme 🔧</h3>
+                <div class="troubleshoot-box fragment fade-up">
+                    <p>Yüksek Gecikme:</p>
+                    <code>ping google.com</code>
+                    <p>Paket Kaybı:</p>
+                    <code>traceroute</code>
+                    <p>Jitter Test:</p>
+                    <code>iperf3</code>
+                </div>
+            </section>
+         </section>
+
+         <section>
+            <section data-auto-animate>
+                <h2>Jitter Nedir? 📊</h2>
+                <div class="definition-box fragment fade-up">
+                    <p>Gecikme sürelerindeki dalgalanma</p>
+                    <code>Ping: 20ms → 35ms → 22ms → 40ms</code>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Gerçek Hayattan Örnek 🚦</h3>
+                <div class="example-box fragment fade-left">
+                    <p>Trafikte arabaların hızı:</p>
+                    <ul>
+                        <li>Sabit hız = Düşük jitter ✅</li>
+                        <li>Sürekli yavaşlama/hızlanma = Yüksek jitter ❌</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Neden Önemli? 🎯</h3>
+                <div class="impact-box fragment fade-up">
+                    <p>Online Oyun:</p>
+                    <div class="bad-scenario fragment fade-right">
+                        <p>Yüksek Jitter:</p>
+                        <p>Karakterin takılması 😫</p>
+                        <p>Şaşırtıcı gecikmeler 😤</p>
+                    </div>
+                    <div class="good-scenario fragment fade-right">
+                        <p>Düşük Jitter:</p>
+                        <p>Akıcı oyun deneyimi 🎮</p>
+                        <p>Tutarlı tepki süresi ⚡</p>
+                    </div>
+                </div>
+            </section>
+         </section>
+
+         <section>
+            <section data-auto-animate>
+                <h2>Routing Protokolleri</h2>
+                <div class="case-study fragment fade-up">
+                    <p>İstanbul'dan İzmir'e Giden Yollar</p>
+                    <div class="fragment fade-right">
+                        Birden fazla yol var, hangisini seçmeliyiz?
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Yol Seçimi 🚗</h3>
+                <div class="route-box fragment fade-left">
+                    <ul>
+                        <li>İstanbul → İzmit → Bursa → İzmir</li>
+                        <li>İstanbul → Eskişehir → İzmir</li>
+                        <li>İstanbul → Balıkesir → İzmir</li>
+                    </ul>
+                    <p class="note fragment fade-up">En kısa? En hızlı? En ekonomik? 🤔</p>
+                </div>
+            </section>
+         
+            <section data-auto-animate>
+                <h2>OSPF vs BGP</h2>
+                <div class="network-diagram fragment fade-up">
+                    <div class="fragment fade-right">OSPF: İç network için</div>
+                    <div class="fragment fade-right">BGP: Dış bağlantılar için</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>OSPF (Open Shortest Path First) 🏢</h3>
+                <div class="protocol-box fragment fade-up">
+                    <p>Şirket İçi Kullanım:</p>
+                    <ul>
+                        <li>Hızlı rota değişikliği</li>
+                        <li>En kısa yolu seçer</li>
+                        <li>Tek kurum kontrolünde</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>BGP (Border Gateway Protocol) 🌐</h3>
+                <div class="protocol-box fragment fade-up">
+                    <p>İnternet Servis Sağlayıcıları:</p>
+                    <ul>
+                        <li>Yavaş ama kararlı</li>
+                        <li>Politika tabanlı routing</li>
+                        <li>Farklı kurumlar arası</li>
+                    </ul>
+                </div>
+            </section>
+         </section>
+
+        <!-- Yük Dengeleme -->
+        <section>
+            <section data-auto-animate>
+                <h2>Yük Dengeleme</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Trafiği nasıl dengeleriz?
+                </div>
+                <div class="tech-box fragment fade-right">
+                    Round Robin
+                    Weighted Round Robin
+                    Least Connection
+                </div>
+            </section>
+         
+            <section>
+                <h3>Market Kasası Örneği 🛒</h3>
+                <div class="example-box fragment fade-up">
+                    <p>3 kasa var:</p>
+                    <ul>
+                        <li>Kasa 1: Deneyimli kasiyer</li>
+                        <li>Kasa 2: Yeni başlayan</li>
+                        <li>Kasa 3: Orta seviye</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Round Robin 🔄</h3>
+                <div class="method-box fragment fade-left">
+                    <p>Sırayla müşteri dağıtımı:</p>
+                    <code>
+                    Müşteri 1 → Kasa 1
+                    Müşteri 2 → Kasa 2
+                    Müşteri 3 → Kasa 3
+                    Müşteri 4 → Kasa 1...
+                    </code>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Weighted Round Robin ⚖️</h3>
+                <div class="method-box fragment fade-up">
+                    <p>Kasiyerlerin hızına göre:</p>
+                    <code>
+                    Kasa 1 (Hızlı) → 3 müşteri
+                    Kasa 2 (Yavaş) → 1 müşteri
+                    Kasa 3 (Orta) → 2 müşteri
+                    </code>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Least Connection 📊</h3>
+                <div class="method-box fragment fade-right">
+                    <p>En az kuyruğu olan kasaya yönlendir:</p>
+                    <ul>
+                        <li>Kasa 1: 5 kişi → ❌</li>
+                        <li>Kasa 2: 1 kişi → ✅</li>
+                        <li>Kasa 3: 3 kişi → ❌</li>
+                    </ul>
+                </div>
+            </section>
+         </section>
+
+        <!-- QoS Temelleri -->
+        <section>
+            <section data-auto-animate>
+                <h2>QoS Nedir?</h2>
+                <div class="case-study fragment fade-up">
+                    <p>Video Konferans vs E-posta</p>
+                    <div class="fragment fade-right">
+                        Hangisi daha öncelikli?
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Trafik Önceliği 🚦</h3>
+                <div class="priorities fragment fade-left">
+                    <div class="high">Yüksek Öncelik:</div>
+                    <ul>
+                        <li>Video Konferans</li>
+                        <li>VoIP Telefon</li>
+                        <li>Online Oyun</li>
+                    </ul>
+                    <div class="low fragment fade-right">Düşük Öncelik:</div>
+                    <ul>
+                        <li>E-posta</li>
+                        <li>Dosya İndirme</li>
+                        <li>Yedekleme</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Hastane Örneği 🏥</h3>
+                <div class="hospital-qos fragment fade-up">
+                    <ol>
+                        <li>Acil Durum Çağrıları</li>
+                        <li>Ameliyathane Görüntüleri</li>
+                        <li>Hasta Kayıtları</li>
+                        <li>İdari E-postalar</li>
+                    </ol>
+                    <div class="note fragment fade-right">
+                        Öncelik = Hayat Kurtarır! ⚕️
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>QoS Nasıl Çalışır? ⚙️</h3>
+                <div class="qos-box fragment fade-up">
+                    <p>1. Trafik Sınıflandırma</p>
+                    <p>2. İşaretleme (DSCP/CoS)</p>
+                    <p>3. Kuyruk Yönetimi</p>
+                    <p>4. Şekillendirme/Policing</p>
+                </div>
+            </section>
+         </section>
+        <!-- TCP/IP Optimizasyonu -->
+        <section>
+            <section data-auto-animate>
+                <h2>TCP/IP Optimizasyonu</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Veri akışını nasıl hızlandırabiliriz? 🚀
+                </div>
+                <div class="tech-box fragment fade-right">
+                    TCP Window Size
+                    Buffer Management
+                    MTU Optimization
+                </div>
+            </section>
+         
+            <section>
+                <h3>TCP Window Size</h3>
+                <div class="window-box fragment fade-left">
+                    <p>Tren Vagonu Örneği 🚂</p>
+                    <div class="example fragment fade-up">
+                        <p>Küçük Pencere:</p>
+                        <code>5 vagon → Onay → 5 vagon</code>
+                        <p>Büyük Pencere:</p>
+                        <code>20 vagon → Onay → 20 vagon</code>
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Buffer Yönetimi 📦</h3>
+                <div class="buffer-box fragment fade-up">
+                    <p>Depo Örneği:</p>
+                    <ul>
+                        <li>Çok Küçük = Tıkanıklık ❌</li>
+                        <li>Çok Büyük = Gecikme ❌</li>
+                        <li>Optimum = Verimli Akış ✅</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>MTU Optimizasyonu 📏</h3>
+                <div class="mtu-box fragment fade-up">
+                    <p>Kargo Kutusu Benzetmesi:</p>
+                    <ul>
+                        <li>Büyük MTU (9000):</li>
+                        <code>Tek büyük paket → Az başlık yükü</code>
+                        <li>Küçük MTU (1500):</li>
+                        <code>Çok paket → Esnek ama yavaş</code>
+                    </ul>
+                    <div class="tip fragment fade-right">
+                        💡 Ağa göre optimize et!
+                    </div>
+                </div>
+            </section>
+         </section>
+
+         <section>
+            <section data-auto-animate>
+                <h2>Buffer Yönetimi</h2>
+                <div class="case-study fragment fade-up">
+                    <p>Online oyun sunucusu düşünelim...</p>
+                    <div class="fragment fade-right">
+                        Milisaniyeler bile önemli!
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Buffer Boyutları</h3>
+                <div class="buffer-example fragment fade-left">
+                    <p>Counter-Strike Sunucusu:</p>
+                    <ul>
+                        <li>Küçük Buffer (32KB)</li>
+                        <code>Tepki süresi: 5ms ⚡</code>
+                        <li>Büyük Buffer (256KB)</li>
+                        <code>Tepki süresi: 50ms 🐌</code>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Etkiler 🎮</h3>
+                <div class="impact-box fragment fade-up">
+                    <p>Küçük Buffer:</p>
+                    <ul>
+                        <li>Hızlı tepki ✅</li>
+                        <li>Az gecikme ✅</li>
+                        <li>Olası paket kaybı ❌</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Optimizasyon 🎯</h3>
+                <div class="optimization-box fragment fade-right">
+                    <code>
+                    txqueuelen 1000
+                    buffer_bloat off
+                    net.ipv4.tcp_wmem = 4096 65536 131072
+                    </code>
+                    <div class="note">Oyun için ideal ayarlar!</div>
+                </div>
+            </section>
+         </section>
+
+        <!-- Traffic Shaping -->
+        <section>
+            <section data-auto-animate>
+                <h2>Traffic Shaping</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Trafik polisi gibi düşünün... 🚥
+                </div>
+                <div class="tech-box fragment fade-right">
+                    <p>Şekillendirme Yöntemleri:</p>
+                    <div class="fragment fade-up">Token Bucket</div>
+                    <div class="fragment fade-up">Leaky Bucket</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Token Bucket 🪙</h3>
+                <div class="bucket-box fragment fade-up">
+                    <p>Market Örneği:</p>
+                    <ul>
+                        <li>Her saat başı → 10 jeton</li>
+                        <li>1 indirme = 1 jeton</li>
+                        <li>Maksimum 30 jeton biriktirme</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Leaky Bucket 🪣</h3>
+                <div class="bucket-box fragment fade-up">
+                    <p>Su Damlası Örneği:</p>
+                    <ul>
+                        <li>Kova sabit hızda damlıyor</li>
+                        <li>Saatte 100 MB indirme hızı</li>
+                        <li>Fazlası düşer/kaybolur</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Uygulama 🎯</h3>
+                <div class="usage-box fragment fade-up">
+                    <p>Netflix Senaryosu:</p>
+                    <ul>
+                        <li>4K: 25 Mbps (Token)</li>
+                        <li>HD: 5 Mbps (Sürekli)</li>
+                        <li>SD: 3 Mbps (Minimum)</li>
+                    </ul>
+                </div>
+            </section>
+         </section>
+
+        <!-- Access Control -->
+        <section>
+            <section data-auto-animate>
+                <h2>Access Control Lists</h2>
+                <div class="case-study fragment fade-up">
+                    <p>Bir banka şubesini düşünelim:</p>
+                    <div class="fragment fade-right">
+                        Kasaya herkes girebilir mi?
+                    </div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Banka Örneği 🏦</h3>
+                <div class="example-box fragment fade-left">
+                    <p>Güvenlik Katmanları:</p>
+                    <ul>
+                        <li>Giriş → Herkes</li>
+                        <li>Vezne → Müşteriler</li>
+                        <li>Kasa → Sadece Yetkili</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section data-auto-animate>
+                <h2>ACL Örnekleri</h2>
+                <div class="tech-box fragment fade-up">
+                    <pre class="fragment fade-right">
+         permit tcp 192.168.1.0/24 any eq 80
+         deny ip any any</pre>
+                </div>
+                <div class="tip-box fragment fade-up">
+                    Sıralama çok önemli!
+                </div>
+            </section>
+         
+            <section>
+                <h3>Uygulama 🔒</h3>
+                <div class="acl-box fragment fade-up">
+                    <code>
+                    # İç Ağ İzinleri
+                    permit 192.168.1.0/24 → Vezne
+                    permit 192.168.2.0/24 → Müdür
+                    deny any → Kasa
+                    </code>
+                    <div class="warning fragment fade-right">
+                        İlk eşleşen kural uygulanır!
+                    </div>
+                </div>
+            </section>
+         </section>
+
+        <!-- Troubleshooting -->
+        <section data-auto-animate>
+            <h2>Sorun Giderme Metodolojisi</h2>
+            <div class="chat-bubble fragment fade-up">
+                Nasıl sistematik yaklaşabiliriz?
+            </div>
+            <div class="case-study fragment fade-right">
+                <p>Adım Adım:</p>
+                <div class="fragment fade-up">1. Problemi Tanımla</div>
+                <div class="fragment fade-up">2. Veri Topla</div>
+                <div class="fragment fade-up">3. Analiz Et</div>
+                <div class="fragment fade-up">4. Çözüm Üret</div>
+            </div>
+        </section>
+
+        <!-- Network Design -->
+        <section>
+            <section data-auto-animate>
+                <h2>Hiyerarşik Ağ Tasarımı</h2>
+                <div class="tech-box fragment fade-up">
+                    <p>Üç Katman:</p>
+                    <div class="fragment fade-right">Core Layer</div>
+                    <div class="fragment fade-right">Distribution Layer</div>
+                    <div class="fragment fade-right">Access Layer</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Alışveriş Merkezi Örneği 🏬</h3>
+                <div class="layer-box fragment fade-left">
+                    <ul>
+                        <li>Core: Ana Elektrik Sistemi</li>
+                        <li>Distribution: Kat Elektrik Panoları</li>
+                        <li>Access: Mağaza Prizleri</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Core Layer 🌐</h3>
+                <div class="core-box fragment fade-up">
+                    <ul>
+                        <li>Yüksek Hız</li>
+                        <li>Kesintisiz Çalışma</li>
+                        <li>Ana Omurga</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Distribution Layer ⚡</h3>
+                <div class="dist-box fragment fade-up">
+                    <ul>
+                        <li>VLAN Yönetimi</li>
+                        <li>Routing</li>
+                        <li>Güvenlik Politikaları</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Access Layer 💻</h3>
+                <div class="access-box fragment fade-up">
+                    <ul>
+                        <li>Kullanıcı Bağlantıları</li>
+                        <li>Port Security</li>
+                        <li>PoE Desteği</li>
+                    </ul>
+                </div>
+            </section>
+         </section>
+
+         <!-- Güvenlik Bölgeleri -->
+         <section data-auto-animate>
+            <h2>Güvenlik Bölgeleri</h2>
+            <div class="chat-bubble fragment fade-up">
+                Bir kaleyi düşünelim...
+            </div>
+            <div class="security-zone fragment fade-right">
+                Dış Duvar → DMZ
+                İç Duvar → İç Ağ
+                Kasa → Kritik Sistemler
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h2>DMZ Yapılandırması</h2>
+            <div class="tech-box fragment fade-up">
+                <p>DMZ Servisleri:</p>
+                <div class="fragment fade-right">Web Sunucuları</div>
+                <div class="fragment fade-right">Mail Gateway</div>
+                <div class="fragment fade-right">Proxy Sunucuları</div>
+            </div>
+        </section>
+
+        <section>
+            <section data-auto-animate>
+                <h2>DMZ Nedir? 🛡️</h2>
+                <div class="definition-box fragment fade-up">
+                    <p>Demilitarized Zone:</p>
+                    <p>İç ağ ile dış ağ arasındaki tampon bölge</p>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Ordu Üssü Örneği 🎯</h3>
+                <div class="example-box fragment fade-left">
+                    <ul>
+                        <li>İç Bölge: Askeri Karargah</li>
+                        <li>DMZ: Kontrol Noktası</li>
+                        <li>Dış Bölge: Halk</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section data-auto-animate>
+                <h2>DMZ Yapılandırması</h2>
+                <div class="tech-box fragment fade-up">
+                    <p>DMZ Servisleri:</p>
+                    <div class="fragment fade-right">Web Sunucuları</div>
+                    <div class="fragment fade-right">Mail Gateway</div>
+                    <div class="fragment fade-right">Proxy Sunucuları</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>Güvenlik Katmanları 🔒</h3>
+                <div class="security-box fragment fade-up">
+                    <ul>
+                        <li>İç Ağ: Tam Korumalı</li>
+                        <li>DMZ: Kontrollü Erişim</li>
+                        <li>Dış Ağ: İnternet</li>
+                    </ul>
+                    <div class="note fragment fade-right">
+                        DMZ = Güvenli Geçiş Noktası
+                    </div>
+                </div>
+            </section>
+         </section>
+         
+        <!-- VPN Teknolojileri -->
+        <section data-auto-animate>
+            <h2>VPN Çözümleri</h2>
+            <div class="chat-bubble fragment fade-up">
+                Güvenli bir tünel düşünün...
+            </div>
+            <div class="tech-box fragment fade-right">
+                <p>VPN Türleri:</p>
+                <div class="fragment fade-up">Site-to-Site VPN</div>
+                <div class="fragment fade-up">Remote Access VPN</div>
+            </div>
+        </section>
+
+        <!-- Yüksek Erişilebilirlik -->
+        <section>
+            <section data-auto-animate>
+                <h2>Yedekli Sistemler</h2>
+                <div class="chat-bubble fragment fade-up">
+                    Yedek lastik neden önemli?
+                </div>
+                <div class="tech-box fragment fade-right">
+                    <p>Redundancy Seviyeleri:</p>
+                    <div class="fragment fade-up">N+1</div>
+                    <div class="fragment fade-up">N+N</div>
+                    <div class="fragment fade-up">2N+1</div>
+                </div>
+            </section>
+         
+            <section>
+                <h3>N+1 Örneği 🚗</h3>
+                <div class="redundancy-box fragment fade-left">
+                    <p>4 lastik + 1 yedek</p>
+                    <ul>
+                        <li>Normal: 4 lastik çalışıyor</li>
+                        <li>Patlama: Yedek devrede</li>
+                        <li>Maliyet: Ekonomik ✅</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>N+N Örneği ⚡</h3>
+                <div class="redundancy-box fragment fade-up">
+                    <p>Veri Merkezi Güç Kaynağı:</p>
+                    <ul>
+                        <li>2 ayrı UPS sistemi</li>
+                        <li>Her biri tam yükü kaldırabilir</li>
+                        <li>Maliyet: Yüksek 💰</li>
+                    </ul>
+                </div>
+            </section>
+         
+            <section>
+                <h3>2N+1 Örneği 🏢</h3>
+                <div class="redundancy-box fragment fade-right">
+                    <p>Kritik Sunucu Sistemi:</p>
+                    <ul>
+                        <li>2 tam sistem + 1 yedek</li>
+                        <li>Ultra yüksek güvenilirlik</li>
+                        <li>Maliyet: Çok Yüksek 💰💰</li>
+                    </ul>
+                </div>
+            </section>
+         </section>
+
+        <!-- Network Monitoring -->
+        <section data-auto-animate>
+            <h2>SNMP İzleme</h2>
+            <div class="monitoring-alert fragment fade-up">
+                <p>Kritik Metrikler:</p>
+                <div class="fragment fade-right">CPU Kullanımı > 80%</div>
+                <div class="fragment fade-right">Bellek Kullanımı > 90%</div>
+                <div class="fragment fade-right">Interface Errors > 1%</div>
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h2>Log Analizi</h2>
+            <div class="tech-box fragment fade-up">
+                <pre class="fragment fade-right">
+2024-01-15 10:15:23 WARNING
+Interface Gi0/1 packet drops
+Threshold exceeded</pre>
+            </div>
+            <div class="chat-bubble fragment fade-up">
+                Loglar bize ne anlatıyor?
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section data-auto-animate>
+            <h2>Dokümantasyon Önemi</h2>
+            <div class="chat-bubble fragment fade-up">
+                Neden her şeyi kaydetmeliyiz?
+            </div>
+            <div class="tech-box fragment fade-right">
+                <p>Kritik Dokümanlar:</p>
+                <div class="fragment fade-up">Network Topolojisi</div>
+                <div class="fragment fade-up">IP Planı</div>
+                <div class="fragment fade-up">Değişiklik Kayıtları</div>
+            </div>
+        </section>
+
+        <!-- Güvenlik Bölgeleri -->
+        <section data-auto-animate>
+            <h2>Güvenlik Bölgeleri</h2>
+            <div class="chat-bubble fragment fade-up">
+                Bir kaleyi düşünelim...
+            </div>
+            <div class="security-zone fragment fade-right">
+                Dış Duvar → DMZ
+                İç Duvar → İç Ağ
+                Kasa → Kritik Sistemler
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h2>DMZ Yapılandırması</h2>
+            <div class="tech-box fragment fade-up">
+                <p>DMZ Servisleri:</p>
+                <div class="fragment fade-right">Web Sunucuları</div>
+                <div class="fragment fade-right">Mail Gateway</div>
+                <div class="fragment fade-right">Proxy Sunucuları</div>
+            </div>
+        </section>
+
+        <!-- VPN Teknolojileri -->
+        <section data-auto-animate>
+            <h2>VPN Çözümleri</h2>
+            <div class="chat-bubble fragment fade-up">
+                Güvenli bir tünel düşünün...
+            </div>
+            <div class="tech-box fragment fade-right">
+                <p>VPN Türleri:</p>
+                <div class="fragment fade-up">Site-to-Site VPN</div>
+                <div class="fragment fade-up">Remote Access VPN</div>
+            </div>
+        </section>
+
+        <!-- Yüksek Erişilebilirlik -->
+        <section data-auto-animate>
+            <h2>Yedekli Sistemler</h2>
+            <div class="chat-bubble fragment fade-up">
+                Yedek lastik neden önemli?
+            </div>
+            <div class="tech-box fragment fade-right">
+                <p>Redundancy Seviyeleri:</p>
+                <div class="fragment fade-up">N+1</div>
+                <div class="fragment fade-up">N+N</div>
+                <div class="fragment fade-up">2N+1</div>
+            </div>
+        </section>
+
+        <!-- Network Monitoring -->
+        <section data-auto-animate>
+            <h2>SNMP İzleme</h2>
+            <div class="monitoring-alert fragment fade-up">
+                <p>Kritik Metrikler:</p>
+                <div class="fragment fade-right">CPU Kullanımı > 80%</div>
+                <div class="fragment fade-right">Bellek Kullanımı > 90%</div>
+                <div class="fragment fade-right">Interface Errors > 1%</div>
+            </div>
+        </section>
+
+        <section data-auto-animate>
+            <h2>Log Analizi</h2>
+            <div class="tech-box fragment fade-up">
+                <pre class="fragment fade-right">
+2024-01-15 10:15:23 WARNING
+Interface Gi0/1 packet drops
+Threshold exceeded</pre>
+            </div>
+            <div class="chat-bubble fragment fade-up">
+                Loglar bize ne anlatıyor?
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section data-auto-animate>
+            <h2>Dokümantasyon Önemi</h2>
+            <div class="chat-bubble fragment fade-up">
+                Neden her şeyi kaydetmeliyiz?
+            </div>
+            <div class="tech-box fragment fade-right">
+                <p>Kritik Dokümanlar:</p>
+                <div class="fragment fade-up">Network Topolojisi</div>
+                <div class="fragment fade-up">IP Planı</div>
+                <div class="fragment fade-up">Değişiklik Kayıtları</div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            autoAnimate: true,
+            fragments: true,
+            controls: true,
+            progress: true,
+            center: true
+        });
+    </script>
 </body>
 </html>
