@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "uuid": "550e8400-e29b-41d4-a716-446655440000",
+      "name": "Market Analysis & Indicators",
+      "short_title": "Market Analysis",
+      "description": "Core market analysis techniques and technical indicators",
+      "content": "Comprehensive collection of market analysis tools and technical indicators for financial markets",
+      "keywords": ["market analysis", "indicators", "technical analysis"],
+      "parent_id": null,
+      "children": [
+        {
+          "id": 101,
+          "uuid": "550e8400-e29b-41d4-a716-446655440001",
+          "name": "Technical Analysis Patterns",
+          "short_title": "Technical Patterns",
+          "description": "Chart patterns and technical analysis formations",
+          "content": "Collection of technical analysis patterns and chart formations",
+          "keywords": ["technical analysis", "patterns", "charts"],
+          "parent_id": 1,
+          "children": [
+            {
+              "id": 1001,
+              "uuid": "550e8400-e29b-41d4-a716-446655440002",
+              "name": "Chart Pattern Recognition",
+              "short_title": "Chart Patterns",
+              "description": "Identification and analysis of chart patterns",
+              "content": "Analysis of various chart patterns and their implications",
+              "keywords": ["chart patterns", "technical analysis", "pattern recognition"],
+              "parent_id": 101,
+              "children": []
+            },
+            {
+              "id": 1002,
+              "uuid": "550e8400-e29b-41d4-a716-446655440003",
+              "name": "Candlestick Patterns",
+              "short_title": "Candlesticks",
+              "description": "Japanese candlestick patterns and analysis",
+              "content": "Study of candlestick patterns and their market implications",
+              "keywords": ["candlestick patterns", "japanese candlesticks", "technical analysis"],
+              "parent_id": 101,
+              "children": []
+            },
+            {
+              "id": 1003,
+              "uuid": "550e8400-e29b-41d4-a716-446655440004",
+              "name": "Price Action Trading",
+              "short_title": "Price Action",
+              "description": "Pure price action trading methods",
+              "content": "Analysis of price movement without indicators",
+              "keywords": ["price action", "trading", "raw price movement"],
+              "parent_id": 101,
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "uuid": "550e8400-e29b-41d4-a716-446655440005",
+          "name": "Technical Indicators",
+          "short_title": "Indicators",
+          "description": "Technical market indicators and studies",
+          "content": "Collection of technical indicators for market analysis",
+          "keywords": ["technical indicators", "market studies", "analysis tools"],
+          "parent_id": 1,
+          "children": [
+            {
+              "id": 1021,
+              "uuid": "550e8400-e29b-41d4-a716-446655440006",
+              "name": "Moving Averages",
+              "short_title": "MA",
+              "description": "Moving average analysis and crossovers",
+              "content": "Study of various moving average types and their applications",
+              "keywords": ["moving averages", "MA", "crossovers"],
+              "parent_id": 102,
+              "children": []
+            },
+            {
+              "id": 1022,
+              "uuid": "550e8400-e29b-41d4-a716-446655440007",
+              "name": "Momentum Indicators",
+              "short_title": "Momentum",
+              "description": "Momentum-based technical indicators",
+              "content": "Analysis of momentum indicators including RSI and MACD",
+              "keywords": ["momentum", "RSI", "MACD"],
+              "parent_id": 102,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "uuid": "550e8400-e29b-41d4-a716-446655440008",
+      "name": "Cryptocurrency & Digital Assets",
+      "short_title": "Crypto",
+      "description": "Cryptocurrency markets and blockchain technology",
+      "content": "Analysis of cryptocurrency markets and related technologies",
+      "keywords": ["cryptocurrency", "blockchain", "digital assets"],
+      "parent_id": null,
+      "children": [
+        {
+          "id": 201,
+          "uuid": "550e8400-e29b-41d4-a716-446655440009",
+          "name": "Bitcoin Analysis",
+          "short_title": "Bitcoin",
+          "description": "Bitcoin market analysis and metrics",
+          "content": "Comprehensive analysis of Bitcoin markets and indicators",
+          "keywords": ["bitcoin", "BTC", "cryptocurrency"],
+          "parent_id": 2,
+          "children": []
+        }
+      ]
+    }
+  ]
+}
